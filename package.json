@@ -61,6 +61,8 @@
     "sinon": "^2.2.0",
     "sinon-sandbox": "^1.0.2",
     "style-loader": "^0.20.1",
+    "ts-mocha": "^8.0.0",
+    "typescript": "4.2.3",
     "webpack": "3.10.0"
   },
   "homepage": "https://github.com/ecmadao/react-times#readme",
@@ -72,7 +74,7 @@
     "timepicker"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "sample/index.ts",
   "maintainers": [
     {
       "email": "wlec@outlook.com",
@@ -90,16 +92,16 @@
   "scripts": {
     "babel": "babel ./src --out-dir ./lib",
     "build": "npm run clean && npm run babel",
-    "build:js": "babel src/ -d lib/ --ignore src/components",
+    "build:ts": "babel src/ -d lib/ --ignore src/components",
     "clean": "rimraf lib",
     "coveralls": "cat ./coverage/lcov/lcov.info | ./node_modules/.bin/coveralls",
     "deploy-storybook": "storybook-to-ghpages",
     "eslint": "./node_modules/eslint/bin/eslint.js src",
-    "mocha": "./node_modules/mocha/bin/mocha --recursive ./test/_helpers --compilers js:babel-register,jsx:babel-register",
+    "mocha": "./node_modules/ts-mocha/bin/ts-mocha --recursive ./test/_helpers --compilers ts:babel-register,tsx:babel-register",
     "postversion": "git commit package.json -m \"Version $npm_package_version\" && npm run tag && git push && git push --tags && npm publish --registry=https://registry.npmjs.org/",
     "prepublish": "in-publish && safe-publish-latest && npm run build || not-in-publish",
     "pretest": "npm run --silent eslint",
-    "scratch": "test/components/TwelveHoursTheme_spec.jsx",
+    "scratch": "test/components/TwelveHoursTheme_spec.tsx",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook-deploy": "npm i && npm run storybook-pro && npm run deploy-storybook",
     "storybook-pro": "build-storybook -c .storybook -o .out",

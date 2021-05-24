@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import OutsideClickHandler from './OutsideClickHandler';
 import Button from './Common/Button';
-import timeHelper from '../utils/time.js';
+import timeHelper from '../utils/time.ts';
 import languageHelper from '../utils/language';
 import ICONS from '../utils/icons';
 import { is } from '../utils/func';

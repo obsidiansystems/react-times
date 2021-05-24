@@ -5,7 +5,7 @@ import {
   POINTER_RADIUS,
   MAX_ABSOLUTE_POSITION,
   MIN_ABSOLUTE_POSITION,
-} from '../../utils/constant.js';
+} from '../../utils/constant.ts';
 import darg from '../../utils/drag';
 
 const propTypes = {

@@ -7,7 +7,7 @@ import {
   POINTER_RADIUS,
   MAX_ABSOLUTE_POSITION,
   MIN_ABSOLUTE_POSITION,
-} from '../../utils/constant.js';
+} from '../../utils/constant.ts';
 import PickerDragHandler from '../Picker/PickerDragHandler';
 import pickerPointGenerator from '../Picker/PickerPointGenerator';
 

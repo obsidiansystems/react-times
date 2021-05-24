@@ -3,7 +3,7 @@ import {
   HOURS,
   MINUTES,
   TWELVE_HOURS
-} from '../../utils/constant.js';
+} from '../../utils/constant.ts';
 import PickerPoint from './PickerPoint';
 
 const pickerPointGenerator = (type = 'hour', mode = 24) =>
